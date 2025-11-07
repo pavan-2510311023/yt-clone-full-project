@@ -1,0 +1,102 @@
+.category-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
+
+.category-bar {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 20px;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.category-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.category-button {
+  padding: 8px 16px;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.category-button:hover {
+  background: #e6e6e6;
+}
+
+.category-button.active {
+  background: #000;
+  color: #fff;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 6px;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.scroll-btn:hover {
+  background: #f2f2f2;
+}
+
+.scroll-btn.left {
+  left: 5px;
+}
+
+.scroll-btn.right {
+  right: 5px;
+}
+
+/* Dark mode support */
+body.dark .category-wrapper {
+  background: #181818;
+  border-color: #333;
+}
+
+body.dark .category-button {
+  background: #303030;
+  color: #fff;
+}
+
+body.dark .category-button.active {
+  background: #fff;
+  color: #000;
+}
+
+body.dark .scroll-btn {
+  background: #202020;
+  color: #fff;
+}
+
+.scroll-btn {
+  opacity: 0.9;
+  transition: opacity 0.3s ease, background 0.3s;
+}
+
+.scroll-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}

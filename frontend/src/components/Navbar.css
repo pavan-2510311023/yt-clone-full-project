@@ -1,0 +1,225 @@
+/* Navbar Base */
+
+
+.navbar.light {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  color: #000;
+}
+
+.navbar.dark {
+  background: #0f0f0f;
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+
+/* Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-left.hidden {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 22px;
+}
+
+.country {
+  font-size: 10px;
+  margin-top: -10px;
+  margin-left: 2px;
+  color: #777;
+}
+
+/* Search Bar */
+.nav-center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 40px;
+  transition: all 0.3s ease;
+}
+
+.nav-center.mobile-active {
+  flex: 1;
+  margin: 0;
+  gap: 10px;
+}
+
+.search-container {
+  display: flex;
+  flex: 1;
+  height: 36px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 40px 0 0 40px;
+  outline: none;
+  font-size: 14px;
+  background: var(--input-bg, #fff);
+  color: var(--input-text, #000);
+}
+
+.navbar.dark .search-container input {
+  border: 1px solid #333;
+  background: #121212;
+  color: #fff;
+}
+
+.search-btn {
+  width: 60px;
+  border: 1px solid #ccc;
+  border-radius: 0 40px 40px 0;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar.dark .search-btn {
+  background: #222;
+  border: 1px solid #333;
+}
+
+.mic-btn {
+  background: #f8f8f8;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar.dark .mic-btn {
+  background: #222;
+}
+
+/* Back Button in Mobile Search */
+.back-icon {
+  cursor: pointer;
+}
+
+/* Right Section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-right.hidden {
+  display: none;
+}
+
+.mobile-search-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.create-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #f2f2f2;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000;
+  transition: background 0.2s;
+}
+
+.navbar.dark .create-btn {
+  background: #272727;
+  color: #fff;
+}
+
+.profile {
+  background: #607d8b;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid #555;
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .nav-center {
+    display: none;
+  }
+
+  .nav-center.mobile-active {
+    display: flex;
+  }
+
+  .mobile-search-icon {
+    display: block;
+  }
+
+  .create-btn {
+    display: none;
+  }
+
+  .theme-toggle {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+
+/* 🎤 Mic Button Active Animation */
+.mic-btn.listening {
+  background: #ff4c4c;
+  color: white;
+  animation: pulse 1.2s infinite;
+  box-shadow: 0 0 10px #ff4c4c;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 76, 76, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 76, 76, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 76, 76, 0.7);
+  }
+}
+
