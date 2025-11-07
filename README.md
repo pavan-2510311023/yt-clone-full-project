@@ -85,7 +85,7 @@ Sticky top bar and collapsible sidebar on smaller screens.
 
 🧰 Setup & Installation
 1️⃣ Clone the Repository
-git clone https://github.com/yourusername/yt-clone-full-project.git
+git clone https://github.com/pavan-2510311023/yt-clone-full-project.git
 cd yt-clone-full-project
 
 2️⃣ Install Dependencies
